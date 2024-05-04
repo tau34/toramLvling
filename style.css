@@ -1,0 +1,157 @@
+body {
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  max-width: 600px;
+  margin: 3rem auto 0;
+  line-height: 1.6;
+  color: #444;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.radio-inline__input {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+
+.radio-inline__label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-right: 18px;
+    border-radius: 3px;
+    transition: all .2s;
+}
+
+.radio-inline__input:checked + .radio-inline__label {
+    background: #B54A4A;
+    color: #fff;
+    text-shadow: 0 0 1px rgba(0,0,0,.7);
+}
+
+.fam_container {
+    display: none;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.checkbox01 {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 25px;
+    position: relative;
+    width: auto;
+}
+
+.checkbox01::before {
+    background: #fff;
+    border: 1px solid #231815;
+    content: '';
+    display: block;
+    height: 16px;
+    left: 5px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+}
+
+.checkbox01::after {
+    border-right: 3px solid #B54A4A;
+    border-bottom: 3px solid #B54A4A;
+    content: '';
+    display: block;
+    height: 9px;
+    left: 10px;
+    margin-top: -7px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
+    width: 5px;
+}
+
+input[type=checkbox]:checked + .checkbox01::after {
+    opacity: 1;
+}
+
+input[type="number"] {
+    width: 4.5em;
+    text-align: right;
+}
+
+.composite {
+    margin: 16px 0;
+}
+
+.input_left, .input_middle {
+    margin: 0 -5px 0 0;
+}
+
+button {
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+button, input[type="number"] {
+    outline: none;
+    border: 1px solid #854A4A;
+    border-radius: 4px;
+    background-color: white;
+    padding: 0.45em 0.7em 0.45em 0.7em;
+}
+
+.lv_minus, input.own_lv, .lv_plus {
+    font-size: 1.3rem;
+    line-height: normal;
+}
+
+.input_left {
+    border-radius: 4px 0 0 4px;
+}
+
+.input_right {
+    border-radius: 0 4px 4px 0;
+}
+
+input.input_middle {
+    border-radius: 0;
+}
+
+.container {
+    margin-bottom: 8px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: solid 2px #778ca3;
+    margin: 16px 0
+}
+
+th {
+    padding: 10px;
+    background: #e9faf9;
+    border: solid 1px #778ca3;
+    border-bottom: solid 2px #778ca3; 
+}
+
+td {
+    padding: 10px;
+}
+
+td, th {
+    border-left: solid 1px #778ca3;
+}
+
+tr:nth-child(2n+1) {
+    background: #e9faf9;
+}

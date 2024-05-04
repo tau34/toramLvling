@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+        import data from "./data.json" assert {type: "json"}
+        console.log(data)
+    </script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="calculate.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <fieldset>
+        <input id="item-1" class="radio-inline__input type" type="radio" name="accessible-radio" 
+            value="0" checked="checked"/>
+        <label class="radio-inline__label" for="item-1">パラ</label>
+        <input id="item-2" class="radio-inline__input type" type="radio" name="accessible-radio"
+            value="1"/>
+        <label class="radio-inline__label" for="item-2">ペット</label>
+    </fieldset>
+    <div class="fam_container">
+        <input type="checkbox" id="item-3" name="checkbox01" class="fam" checked>
+        <label for="item-3" class="checkbox01">なつき度100%</label>
+    </div>
+    <div class="container">
+        <label>難易度:</label>
+        <input type="checkbox" id="item-4" name="checkbox01" class="dif_e">
+        <label for="item-4" class="checkbox01">Easy</label>
+        <input type="checkbox" id="item-5" name="checkbox01" class="dif_n" checked>
+        <label for="item-5" class="checkbox01">Normal</label>
+        <input type="checkbox" id="item-6" name="checkbox01" class="dif_h" checked>
+        <label for="item-6" class="checkbox01">Hard</label>
+        <input type="checkbox" id="item-7" name="checkbox01" class="dif_l">
+        <label for="item-7" class="checkbox01">Lunatic</label>
+        <input type="checkbox" id="item-8" name="checkbox01" class="dif_u">
+        <label for="item-8" class="checkbox01">Ultimate</label>
+    </div>
+    <div class="container">
+        <label>レベル差上限:</label>
+        <button class="input_left dif_minus">-</button>
+        <input class="input_middle max_dif_lv" type="number" min="-1" value="30">
+        <button class="input_right dif_plus">+</button>
+        <label>(-1で無制限)</label>
+    </div>
+    <div class="container">
+        <label>表示ランク数:</label>
+        <button class="input_left num_minus">-</button>
+        <input class="input_middle num_ranks" type="number" min="-1" value="10">
+        <button class="input_right num_plus">+</button>
+        <label>(-1で全て表示)</label>
+    </div>
+    <div class="composite">
+        <span>レベル:</span>
+        <button class="input_left lv_minus">-</button>
+        <input class="input_middle own_lv" type="number" min="1" value="100">
+        <button class="input_right lv_plus">+</button>
+    </div>
+    <button class="calc">ランキングを計算</button>
+    <table>
+        <tr>
+            <th>名前/マップ</th>
+            <th>難易度</th>
+            <th>レベル</th>
+            <th>経験値</th>
+        </tr>
+    </table>
+</body>
+</html>
