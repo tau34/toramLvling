@@ -4,6 +4,10 @@ const magn_par = [11, 11, 11, 11, 11, 11, 10, 9, 7, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1
 const magn_pet = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, .99, .98, .97, 
     .96, .95, .94, .93, .92, .91, .90, .88, .86, .84, .82, .80, .78, .76, .74, .72, .70, .67, .64, 
     .61, .58, .55, .52, .49, .46, .43, .40, .36, .32, .28, .24, .20, .16, .12];
+var data;
+
+fetch('sample.txt').then(response => response.text())
+    .then(d => {data = d;});
 
 function getMagn(diflvl, type, isMaxFamiliar=true) {
     var flag = diflvl > 56
