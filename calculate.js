@@ -51,9 +51,9 @@ function calc() {
     } else {
         numValues = $(".num_ranks")[0].value;
     }
+    $("tbody").html("<tr><th>名前/マップ</th><th>難易度</th><th>レベル</th><th>経験値</th></tr>")
     for (var i = 0; i < numValues; i ++) {
         var index = result[i][0];
-        $("tbody").html("<tr><th>名前/マップ</th><th>難易度</th><th>レベル</th><th>経験値</th></tr>")
         $("tbody").append("<tr><td>" + data[index][0] + "<br>" + data[index][3] + "</td><td>" + 
             data[index][1] + "</td><td>" + data[index][2] + "</td><td>" + result[i][1] + "</td>")
     }
