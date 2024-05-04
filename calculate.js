@@ -6,8 +6,8 @@ const magn_pet = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, .9
     .61, .58, .55, .52, .49, .46, .43, .40, .36, .32, .28, .24, .20, .16, .12];
 var data;
 
-fetch('sample.txt').then(response => response.text())
-    .then(d => {data = d;});
+fetch('/data.json').then(response => response.text())
+    .then(d => {data = JSON.parse(d);});
 
 function getMagn(diflvl, type, isMaxFamiliar=true) {
     var flag = diflvl > 56
